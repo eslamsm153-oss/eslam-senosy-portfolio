@@ -459,6 +459,25 @@ const BRS=[['healthcare','Healthcare','رعاية صحية'],['fnb','F&amp;B','�
 const BRANDS=BRS.flatMap((s,i)=>[0,1].map(n=>{const number=i*2+n+1;return {id:'b'+number,sectorId:s[0],img:'',site:'',campaigns:makeCampaigns(),
  en:{client:'[Brand '+number+']',sector:s[1],platform:'[Market] · [Years]',problem:'[About the company / brand: what it does, its size and its market.]',steps:['[What I managed for them]','[Platforms and budgets]','[What I improved]'],result:'[Key result]',text:'',kpis:[['[X]','[Metric]'],['[X]','[Metric]'],['[X]','[Metric]']],quote:''},
  ar:{client:'[براند '+number+']',sector:s[2],platform:'[السوق] · [السنوات]',problem:'[نبذة عن الشركة أو البراند: نشاطها وحجمها وسوقها.]',steps:['[اللي كنت مسؤول عنه]','[المنصات والميزانيات]','[اللي اتحسّن]'],result:'[أهم نتيجة]',text:'',kpis:[['[X]','[مؤشر]'],['[X]','[مؤشر]'],['[X]','[مؤشر]']],quote:''}}}));
+
+/* ===== REAL RESULT: Al-Atraqchi (added 2026-11-17 — October 2025 data, verified vs screenshots) ===== */
+Object.assign(BRANDS.find(b=>b.id==='b11'),{id:'al-atraqchi',sectorId:'other',img:'./assets/logos/al-atraqchi.webp',site:'',
+ campaigns:{meta:[
+  {img:'./assets/results/al-atraqchi-ads-manager.webp',en:{title:'Meta messaging campaigns — October 2025',result:'14,481 messages at $0.22 per message'},ar:{title:'حملات رسائل ميتا — أكتوبر 2025',result:'14,481 رسالة بتكلفة 0.22 دولار للرسالة'}},
+  {img:'./assets/results/al-atraqchi-sales.webp',en:{title:'Sales results — October 2025',result:'248 orders worth $47,245 — 1.7% conversion rate'},ar:{title:'نتائج المبيعات — أكتوبر 2025',result:'248 طلب بقيمة 47,245 دولار — معدل تحويل 1.7%'}}],
+  tiktok:[],google:[],snapchat:[]},
+ en:{client:'Al-Atraqchi',sector:'Carpets & Home Furnishings',platform:'Iraq · Oct 2025 – Feb 2026',
+  problem:'Al-Atraqchi is a leading Iraqi store specializing in carpets, furniture, and home furnishings. The goal for the first month was to generate $25,000 in sales from Meta ads.',
+  steps:['Managed and optimized advertising campaigns across Meta with a monthly ad budget reaching $50K','Led the creative direction and video angles for ad creatives and content production','Scaled the winning CBO campaigns while keeping the cost per message around $0.22'],
+  result:'$47,245 in sales from $3,225 in ad spend — 14.6x ROAS in one month',
+  text:'Al-Atraqchi is a leading Iraqi store specializing in carpets, furniture, and home furnishings. It offers high-quality products with modern and elegant designs that combine comfort, style, and durability to suit every home.',
+  kpis:[['14.6x','ROAS'],['$47,245','Sales'],['248','Orders']],quote:''},
+ ar:{client:'الأطرقجي',sector:'السجاد والمفروشات المنزلية',platform:'العراق · أكتوبر 2025 – فبراير 2026',
+  problem:'الأطرقجي متجر عراقي رائد متخصص في السجاد والأثاث والمفروشات المنزلية، والهدف في الشهر الأول كان تحقيق 25,000 دولار مبيعات من إعلانات ميتا.',
+  steps:['إدارة وتحسين الحملات الإعلانية على ميتا بميزانية شهرية تصل إلى 50 ألف دولار','قيادة الاتجاه الإبداعي وزوايا الفيديو للإعلانات وإنتاج المحتوى','توسيع حملات CBO الناجحة مع الحفاظ على تكلفة الرسالة حوالي 0.22 دولار'],
+  result:'47,245 دولار مبيعات من 3,225 دولار صرف — عائد 14.6x في شهر واحد',
+  text:'الأطرقجي متجر عراقي رائد متخصص في السجاد والأثاث والمفروشات المنزلية، يقدم منتجات عالية الجودة بتصاميم عصرية وأنيقة تجمع بين الراحة والأناقة والمتانة لتناسب كل بيت.',
+  kpis:[['14.6x','العائد على الإنفاق الإعلاني'],['$47,245','المبيعات'],['248','الطلبات']],quote:''}});
 function brandLogo(b,t,small=false,eager=false){return `<div class="brand-logo${small?' small':''}">${b.img?`<img src="${b.img}" alt="${t.client} logo" loading="${eager||b.img.startsWith('data:')?'eager':'lazy'}">`:`<span class="brand-initial d" aria-hidden="true">${t.client.replace(/[\[\]]/g,'').trim().split(/\s+/).map(w=>w[0]).join('').slice(0,2)}</span>`}</div>`}
 /* ===== REAL BRAND LOGOS: update market names between the brackets when confirmed ===== */
 const LOGO_PATH='./assets/logos/';
