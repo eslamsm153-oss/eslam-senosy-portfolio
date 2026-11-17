@@ -478,6 +478,25 @@ Object.assign(BRANDS.find(b=>b.id==='b11'),{id:'al-atraqchi',sectorId:'fashion',
   result:'47,245 دولار مبيعات من 3,225 دولار صرف — عائد 14.6x في شهر واحد',
   text:'الأطرقجي متجر عراقي رائد متخصص في السجاد والأثاث والمفروشات المنزلية، يقدم منتجات عالية الجودة بتصاميم عصرية وأنيقة تجمع بين الراحة والأناقة والمتانة لتناسب كل بيت.',
   kpis:[['14.6x','العائد على الإنفاق الإعلاني'],['$47,245','المبيعات'],['248','الطلبات']],quote:''}});
+
+/* ===== REAL RESULT: Jaana-Alkather Honey (added 2026-11-17 — November 2025 data, verified vs screenshots) ===== */
+Object.assign(BRANDS.find(b=>b.id==='b3'),{id:'jaana-alkather-honey',sectorId:'fnb',img:'./assets/logos/jaana-alkather-honey.webp',site:'',
+ campaigns:{meta:[
+  {img:'./assets/results/jaana-alkather-ads-manager.webp',en:{title:'Meta messaging campaigns — November 2025',result:'774 messages at $0.79 per message'},ar:{title:'حملات رسائل ميتا — نوفمبر 2025',result:'774 رسالة بتكلفة 0.79 دولار للرسالة'}},
+  {img:'./assets/results/jaana-alkather-sales.webp',en:{title:'Sales results — November 2025',result:'45 orders worth more than $3,400 in November 2025'},ar:{title:'نتائج المبيعات — نوفمبر 2025',result:'45 طلب بقيمة أكثر من 3,400 دولار في نوفمبر 2025'}}],
+  tiktok:[],google:[],snapchat:[]},
+ en:{client:'Jaana-Alkather Honey',sector:'Premium Natural Honey',platform:'Iraq · Nov 2025',
+  problem:'An Iraqi brand specializing in premium natural honey products. It is committed to providing high-quality honey that supports overall wellness and is traditionally used as part of a healthy lifestyle for people managing chronic health conditions.',
+  steps:['Managed and optimized advertising campaigns across Meta with a monthly ad budget reaching $1,000','Led the creative direction and video angles for ad creatives and content production'],
+  result:'More than $3,400 in sales from $610 in ad spend — 5.6x ROAS in one month',
+  text:'An Iraqi brand specializing in premium natural honey products. It is committed to providing high-quality honey that supports overall wellness and is traditionally used as part of a healthy lifestyle for people managing chronic health conditions.',
+  kpis:[['5.6x','ROAS'],['$3,400+','Sales'],['45','Orders']],quote:''},
+ ar:{client:'عسل جنى آل كثير',sector:'عسل طبيعي فاخر',platform:'العراق · نوفمبر 2025',
+  problem:'علامة عراقية متخصصة في منتجات العسل الطبيعي الفاخر، ملتزمة بتقديم عسل عالي الجودة يدعم الصحة العامة، ويُستخدم تقليديًا كجزء من نمط حياة صحي للأشخاص الذين يتعايشون مع حالات صحية مزمنة.',
+  steps:['إدارة وتحسين الحملات الإعلانية على ميتا بميزانية شهرية تصل إلى 1,000 دولار','قيادة الاتجاه الإبداعي وزوايا الفيديو للإعلانات وإنتاج المحتوى'],
+  result:'أكثر من 3,400 دولار مبيعات من 610 دولار صرف — عائد 5.6x في شهر واحد',
+  text:'علامة عراقية متخصصة في منتجات العسل الطبيعي الفاخر، ملتزمة بتقديم عسل عالي الجودة يدعم الصحة العامة، ويُستخدم تقليديًا كجزء من نمط حياة صحي للأشخاص الذين يتعايشون مع حالات صحية مزمنة.',
+  kpis:[['5.6x','العائد على الإنفاق الإعلاني'],['$3,400+','المبيعات'],['45','الطلبات']],quote:''}});
 function brandLogo(b,t,small=false,eager=false){return `<div class="brand-logo${small?' small':''}">${b.img?`<img src="${b.img}" alt="${t.client} logo" loading="${eager||b.img.startsWith('data:')?'eager':'lazy'}">`:`<span class="brand-initial d" aria-hidden="true">${t.client.replace(/[\[\]]/g,'').trim().split(/\s+/).map(w=>w[0]).join('').slice(0,2)}</span>`}</div>`}
 /* ===== REAL BRAND LOGOS: update market names between the brackets when confirmed ===== */
 const LOGO_PATH='./assets/logos/';
